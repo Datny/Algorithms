@@ -5,7 +5,7 @@ from copy import deepcopy
 # With begginning and ending point.
 
 def large_cont_sum(arr):
-    left_max_sum = 0
+    left_max_sum = arr[0]
     left_max_idx = 0
     for idx1, el2 in enumerate(arr):
         cont_sum_arr = deepcopy(arr)
@@ -23,6 +23,21 @@ def large_cont_sum(arr):
 large_cont_sum([-30,1,2,-1,3,4,10,10,-10,-1])
 
 from nose.tools import assert_equal
+
+
+def large_cont_sum2(arr):
+    if len(arr) == 0:
+        return 0
+
+    max_sum = current_sum = arr[0]
+
+    for num in arr[1:]:
+        current_sum = max(current_sum + num, num)
+        max_sum = max(current_sum, max_sum)
+    return max_sum
+
+
+
 
 
 class LargeContTest(object):
