@@ -10,18 +10,20 @@ def compress(s):
             word_dict[letter] = 1
     return "".join("".join((str(k), str(v))) for k, v in word_dict.items())
 
-compress('AAAAABBBBCCCC')
+
+compress("AAAAABBBBCCCC")
 
 
 from nose.tools import assert_equal
 
-class TestCompress(object):
 
+class TestCompress(object):
     def test(self, sol):
-        assert_equal(sol(''), '')
-        assert_equal(sol('AABBCC'), 'A2B2C2')
-        assert_equal(sol('AAABCCDDDDD'), 'A3B1C2D5')
-        print ('ALL TEST CASES PASSED- string compression')
+        assert_equal(sol(""), "")
+        assert_equal(sol("AABBCC"), "A2B2C2")
+        assert_equal(sol("AAABCCDDDDD"), "A3B1C2D5")
+        print("ALL TEST CASES PASSED- string compression")
+
 
 # Run Tests
 t = TestCompress()

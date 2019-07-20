@@ -4,6 +4,7 @@ from copy import deepcopy
 # Given an array of integers (positive and negative) find the largest continuous sum.
 # With begginning and ending point.
 
+
 def large_cont_sum(arr):
     left_max_sum = arr[0]
     left_max_idx = 0
@@ -17,10 +18,10 @@ def large_cont_sum(arr):
             left_max_sum = max(cont_sum_arr)
             left_max_idx = idx1
             right_max_idx = idx1 + idx2 - 2
-    return (left_max_sum)
+    return left_max_sum
 
 
-large_cont_sum([-30,1,2,-1,3,4,10,10,-10,-1])
+large_cont_sum([-30, 1, 2, -1, 3, 4, 10, 10, -10, -1])
 
 from nose.tools import assert_equal
 
@@ -37,15 +38,12 @@ def large_cont_sum2(arr):
     return max_sum
 
 
-
-
-
 class LargeContTest(object):
     def test(self, sol):
         assert_equal(sol([1, 2, -1, 3, 4, -1]), 9)
         assert_equal(sol([1, 2, -1, 3, 4, 10, 10, -10, -1]), 29)
         assert_equal(sol([-1, 1]), 1)
-        print('ALL TEST CASES PASSED')
+        print("ALL TEST CASES PASSED")
 
 
 # Run Test

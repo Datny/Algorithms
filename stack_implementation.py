@@ -1,7 +1,4 @@
-
-
 class Stack:
-
     def __init__(self):
         self.items = list()
 
@@ -15,8 +12,7 @@ class Stack:
         return self.items.pop()
 
     def peek(self):
-        return self.items[len(self.items-1)]
+        return self.items[len(self.items - 1)]
 
     def size(self):
         return len(self.items)
-

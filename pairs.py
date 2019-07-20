@@ -10,13 +10,16 @@ def pair_sum(arr, k):
                 continue
             else:
                 if arr[indx] + arr[indx2] == k:
-                    if (arr[indx], arr[indx2]) not in pairs and (arr[indx2], arr[indx]) not in pairs:
+                    if (arr[indx], arr[indx2]) not in pairs and (
+                        arr[indx2],
+                        arr[indx],
+                    ) not in pairs:
                         pairs.append((arr[indx], arr[indx2]))
     return print(pairs)
 
 
 def pair_sum2(arr, k):
-    if (len(arr) < 2):
+    if len(arr) < 2:
         return
 
     seen = set()
@@ -31,7 +34,7 @@ def pair_sum2(arr, k):
     print(output)
 
 
-pair_sum([1,3,2,2],4)
-pair_sum([1,9,2,8,3,7,4,6,5,5,13,14,11,13,-1],10)
-pair_sum([1,2,3,1],3)
-pair_sum([1,3,2,2],4)
+pair_sum([1, 3, 2, 2], 4)
+pair_sum([1, 9, 2, 8, 3, 7, 4, 6, 5, 5, 13, 14, 11, 13, -1], 10)
+pair_sum([1, 2, 3, 1], 3)
+pair_sum([1, 3, 2, 2], 4)

@@ -1,5 +1,4 @@
 class Deque(object):
-
     def __init__(self):
         self.items = []
 
@@ -20,5 +19,3 @@ class Deque(object):
 
     def size(self):
         return len(self.items)
-
-
