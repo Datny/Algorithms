@@ -49,7 +49,7 @@ class TestCycleCheck(object):
         assert_equal(sol(a), True)
         assert_equal(sol(x), False)
 
-        print("ALL TEST CASES PASSED")
+        print("ALL TEST CASES PASSED- single link cyc list")
 
 
 # Run Tests
