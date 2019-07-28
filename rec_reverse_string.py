@@ -4,8 +4,7 @@ def rev(s):
         return s
 
     else:
-        return rev(s[1:])+s[0]
+        return rev(s[1:]) + s[0]
+
 
 print(rev("abc"))
-
-
